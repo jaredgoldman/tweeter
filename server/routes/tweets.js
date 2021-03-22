@@ -17,12 +17,12 @@ module.exports = function(DataHelpers) {
     });
   });
 
-  tweetsRoutes.post("/", function(req, res) {
+  tweetsRoutes.post("/tweets", function(req, res) {
     if (!req.body.text) {
       res.status(400).json({ error: 'invalid request: no data in POST body'});
       return;
     }
-
+    // creates tweet object 
     const user = req.body.user ? req.body.user : userHelper.generateRandomUser();
     const tweet = {
       user: user,
@@ -31,7 +31,8 @@ module.exports = function(DataHelpers) {
       },
       created_at: Date.now()
     };
-
+    // accessing the DataHelpers object method and feeding the newly
+    // created tweet through it 
     DataHelpers.saveTweet(tweet, (err) => {
       if (err) {
         res.status(500).json({ error: err.message });
