@@ -1,4 +1,58 @@
+section {
+  width: 70%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.compose {
+  display: flex;
+  flex-direction: column;
+  padding-left: 40px;
+}
+
+.handle {
+  display: none;
+}
+textarea {
+  border: none;
+  border-bottom: solid black;
+  width: 85%;
+  background-color: #f4f1ec;
+  font-size: 15px;
+  font-weight: 800;
+  color: black;
+  margin: 0px 20px 0px 25px;
+}
+
+label {
+  margin-right: 36.5%;
+  font-size: 18px;
+  margin-bottom: 3px;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+button {
+  font-size: 20px;
+  background-color: #4056A1;
+  color: white;
+}
+
 .buttoncounter {
+  font-family: 'Bungee', cursive;
   display: flex;
   justify-content: space-between;
+  margin: 10px 10px 15px 10px;
+  width: 85%;
+}
+
+.negativechars {
+  color: red;
 }

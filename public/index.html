@@ -24,12 +24,18 @@
 
     <!-- New Tweet CSS -->
     <link rel="stylesheet" href="styles/new-tweet.css" type="text/css">
+   
+    <!-- Tweetfeed CSS -->
+    <link rel="stylesheet" href="styles/tweet-feed.css" type="text/css">
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
+    
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    
+    <!-- Char Counter JS -->
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   </head>
 
   <body>
@@ -38,7 +44,7 @@
       <span class="title">Tweeter</span>
       <span class ="newtweet"><strong>Write </strong>a new tweet</span>
     </nav>
-    <header>
+    <header class ="mainheader">
       <div>
           <img src="/images/profile-hex.png"> 
       </div>
@@ -49,15 +55,33 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <h2>Compose Tweet</h2>
+        <div class="compose">
+          <h3 class ="composespan">Compose Tweet</h3>
+          <label>What are you humming about?</label>
+        </div>  
         <form action="/tweets" method="POST">
-          <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+          <textarea name="text" id="tweet-text"></textarea>
           <div class="buttoncounter">
             <button type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
+        <div class="tweetcontainer">
+        </div>
       </section>
+      <article>
+        <header >
+          <div class="avatar">
+            <div>icon</div>
+            <div>actual name</div>
+          </div>
+          <div class="handle">handle</div>
+        </header>
+        <div class="tweetbody">here is where the tweet goes</div>
+        <footer>
+          <div>age</div>
+          <div class="socials">socials</div>
+        </footer>
     </main>
   </body>
 </html>

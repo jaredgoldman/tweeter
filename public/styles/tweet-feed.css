@@ -1,0 +1,42 @@
+article {
+  display: flex;
+  flex-direction: column;
+  border: solid 4px;
+  width: 100%;
+  padding: 10px;
+  filter: opacity(45%);
+}
+ 
+article:hover {
+  display: flex;
+  flex-direction: column;
+  border: solid 3px;
+  width: 100%;
+  padding: 10px;
+  filter: opacity(100%);
+  box-shadow: 10px 10px rgb(194, 194, 194);
+}
+
+
+article > header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.avatar {
+  display: flex;
+}
+
+.tweetbody {
+  padding: 30px 10px 30px 10px;
+  margin-bottom: 5px;
+  border-bottom: solid 2px;
+}
+
+article > footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 3px 20px 8px 20px;
+  font-size: 16px;
+}
