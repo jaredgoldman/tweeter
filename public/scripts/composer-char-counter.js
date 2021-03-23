@@ -8,8 +8,12 @@ $(document).ready(function() {
       }
   })
 
-  $('.tweetcontainer').on('mouseover', function() {
+  $('article').on('mouseover', function() {
     $('.handle').css('display', 'block');
   })
+  $('article').on('mouseout', function() {
+    $('.handle').css('display', 'none');
+  })
+  
 
 });

@@ -15,9 +15,7 @@ form {
   padding-left: 40px;
 }
 
-.handle {
-  display: none;
-}
+
 textarea {
   border: none;
   border-bottom: solid black;
