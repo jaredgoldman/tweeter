@@ -1,5 +1,8 @@
 section {
   width: 70%;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 30px;
 }
 
 form {
@@ -12,19 +15,23 @@ form {
 .compose {
   display: flex;
   flex-direction: column;
-  padding-left: 40px;
+  align-items: flex-start;
 }
 
+#error {
+  font-size: 15px;
+  color: red;
+}
 
 textarea {
   border: none;
   border-bottom: solid black;
-  width: 85%;
+  width: 100%;
   background-color: #f4f1ec;
   font-size: 15px;
   font-weight: 800;
   color: black;
-  margin: 0px 20px 0px 25px;
+  resize: none;
 }
 
 label {
@@ -38,17 +45,19 @@ textarea:focus {
 }
 
 button {
-  font-size: 20px;
+  font-size: 15px;
   background-color: #4056A1;
   color: white;
+  height: 80%;
 }
 
 .buttoncounter {
   font-family: 'Bungee', cursive;
+  font-size: 20px;
   display: flex;
   justify-content: space-between;
-  margin: 10px 10px 15px 10px;
-  width: 85%;
+  margin: 10px;
+  width: 100%;
 }
 
 .negativechars {

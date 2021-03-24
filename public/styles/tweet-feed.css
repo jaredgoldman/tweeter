@@ -5,6 +5,7 @@ article {
   width: 100%;
   padding: 10px;
   filter: opacity(45%);
+  margin-bottom: 30px;
 }
  
 article:hover {
@@ -15,20 +16,23 @@ article:hover {
   padding: 10px;
   filter: opacity(100%);
   box-shadow: 10px 10px rgb(194, 194, 194);
+  margin-bottom: 30px;
 }
 
 .handle {
   display: none;
 }
 
-article > header {
+.tweet-top {
   display: flex;
   justify-content: space-between;
-  padding: 10px;
+  padding: 5px 20px 10px 10px;
 }
 
 .avatar {
   display: flex;
+  justify-content: space-between;
+  width: 30%;
 }
 
 .tweetbody {
@@ -37,7 +41,7 @@ article > header {
   border-bottom: solid 2px;
 }
 
-article > footer {
+.tweet-bottom {
   display: flex;
   justify-content: space-between;
   padding: 3px 20px 8px 20px;

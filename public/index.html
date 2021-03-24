@@ -28,28 +28,20 @@
     <!-- Tweetfeed CSS -->
     <link rel="stylesheet" href="styles/tweet-feed.css" type="text/css">
 
-    <!-- External JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
-    
-    <!-- Char Counter JS -->
-    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   </head>
-
+  
   <body>
     <!-- Top nav bar (fixed) -->
-    <nav>
+    <nav id="navbar">
       <span class="title">Tweeter</span>
       <span class ="newtweet"><strong>Write </strong>a new tweet</span>
     </nav>
     <header class ="mainheader">
       <div>
-          <img src="/images/profile-hex.png"> 
+        <img src="/images/profile-hex.png"> 
       </div>
       <div>
-          <h2>Your Name</h2>
+        <h2>Your Name</h2>
       </div>
     </header>
     <!-- Page-specific (main) content here -->
@@ -57,9 +49,10 @@
       <section class="new-tweet">
         <div class="compose">
           <h3 class ="composespan">Compose Tweet</h3>
+          <div id="error"></div>
           <label>What are you humming about?</label>
         </div>  
-        <form action="/tweets" method="POST">
+        <form id="newtweet" action="/tweets" method="POST" name="tweetform">
           <textarea name="text" id="tweet-text"></textarea>
           <div class="buttoncounter">
             <button type="submit">Tweet</button>
@@ -67,19 +60,22 @@
           </div>
         </form>
       </section>
-      <article>
-        <header >
-          <div class="avatar">
-            <div>icon</div>
-            <div>actual name</div>
-          </div>
-          <div class="handle">handle</div>
-        </header>
-        <div class="tweetbody">here is where the tweet goes</div>
-        <footer>
-          <div>age</div>
-          <div class="socials">socials</div>
-        </footer>
+      <section id="tweets-container">
+      </section>
     </main>
+    <scripts>
+      <!-- External JS -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      
+      <!-- App JS -->
+      <script type="text/javascript" src="/scripts/client.js"></script>
+      
+      <!-- Sticky Nav JS -->
+      <script type="text/javascript" src="/scripts/stickynav.js"></script>
+      
+      <!-- Char Counter JS -->
+      <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    </scripts>
   </body>
-</html>
+  </html>
+  
