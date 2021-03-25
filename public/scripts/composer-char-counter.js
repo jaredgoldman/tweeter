@@ -10,5 +10,4 @@ $(document).ready(function() {
         // figure out how to alter class instead of setting style
       }
   })
-
 });

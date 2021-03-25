@@ -1,22 +1,15 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
-*/
-
 $(document).ready(function() {
   
-// create event handler for when the button is pushed
-// create functions to handle event and disable default action
-// feed information from tweet to renderTweets function 
-
+// AJAX REQUESTS
   const sendTweet = (tweetBody) => {
     $.ajax({
       url: '/tweets',
       method: 'POST',
       data: tweetBody
     })
-    .then(console.log('tweet sent'))
+    .then(() => {
+      loadTweets();
+    })
     .catch(err => console.log(err))
   } 
 
@@ -49,12 +42,11 @@ $(document).ready(function() {
     const handle = tweetObject.user.handle;
     const tweet = tweetObject.content.text;
     const dateCreated = tweetObject.created_at;
-    // TODO - turn into human readable date string 
     
     const $tweetHeader = $(
      `<div class="tweet-top">
         <div class="avatar">
-        <img src="${avatar}">
+        <img src="${avatar}" class="avatar-image">
         <p>${name}</p>
       </div>
       <p class="handle">${handle}</p>
@@ -69,7 +61,7 @@ $(document).ready(function() {
       <div class="socials">socials</div>
       </div>`
     )
-    // TODO - implement .text method on any part of the tweet that could suffer a text injection
+    
     const $tweet = $('<article class="tweet">')
     
     $tweet.append($tweetHeader)
@@ -84,6 +76,7 @@ $(document).ready(function() {
       return (tweet.length > 140 || tweet.length <= 0) 
     }
 
+    // show error messages 
     const loadErrors = (tweet) => {
       if (tweet.length < 140) {
         $('#error').text('you cannot send a blank tweet');
@@ -94,6 +87,9 @@ $(document).ready(function() {
       }
     }
 
+    // EVENT HANDLERS //
+
+    // slide animation for new tweet form 
     $('#compose-container', ).on('click', function () {
       if ($('#new-tweet').css('display') === 'block') {
         $('#new-tweet').slideUp();           
@@ -101,11 +97,24 @@ $(document).ready(function() {
         $('#new-tweet').slideDown();   
       }
     });
-        
+
+    $(window).on('scroll', function() {
+      var scroll = $(window).scrollTop();
+
+      if (scroll >= 500) {
+        $('#button-container').removeClass('button-container');
+        $('#button-container').addClass('button-container-scroll');
+      } else {
+        $('#button-container').removeClass('button-container-scroll');
+        $('#button-container').addClass('button-container');
+      }
+    })
+
+    // submit event handler 
     $('#newtweet').on('submit', function(event) {
       $('#error').slideUp();
       event.preventDefault();
-      loadTweets();
+      // loadTweets();
       const $tweet = $('#tweet-text').val();
       if (isTweetInvalid($tweet)) {
         loadErrors($tweet);
@@ -116,7 +125,6 @@ $(document).ready(function() {
     }) 
     
     loadTweets();
+    
+  });
 
-});
-
-// we could loadTweets every time we click submit 
