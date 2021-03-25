@@ -1,5 +1,6 @@
 #tweets-container {
   width: 85%;
+  margin-top: 1.3em;
 }
  
 .tweet {
@@ -73,9 +74,9 @@
   justify-content: flex-end;
 }
 
-.button-container {
-  display: none;
-}
+/* .button-container {
+  display: 
+} */
 
 .button-background {
   display: flex;

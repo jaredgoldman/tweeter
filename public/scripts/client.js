@@ -1,6 +1,7 @@
 $(document).ready(function() {
   
-// AJAX REQUESTS
+                     // AJAX REQUESTS ??
+
   const sendTweet = (tweetBody) => {
     $.ajax({
       url: '/tweets',
@@ -21,6 +22,8 @@ $(document).ready(function() {
     .then(res => renderTweets(res))
     .catch(err => console.log(err))
   }
+
+                    // TWEET GENERATION //
 
 // empties tweet-container first so we don't build up a massive pile of duplicate
 // tweets when reloading 
@@ -88,7 +91,7 @@ $(document).ready(function() {
     }
 
     // EVENT HANDLERS //
-
+    
     // slide animation for new tweet form 
     $('#compose-container', ).on('click', function () {
       if ($('#new-tweet').css('display') === 'block') {
@@ -97,10 +100,10 @@ $(document).ready(function() {
         $('#new-tweet').slideDown();   
       }
     });
-
+    
+    // makes form-top button appear and dissapear depending on where user has scrolled
     $(window).on('scroll', function() {
       var scroll = $(window).scrollTop();
-
       if (scroll >= 500) {
         $('#button-container').removeClass('button-container');
         $('#button-container').addClass('button-container-scroll');
@@ -109,7 +112,7 @@ $(document).ready(function() {
         $('#button-container').addClass('button-container');
       }
     })
-
+    
     // submit event handler 
     $('#newtweet').on('submit', function(event) {
       $('#error').slideUp();

@@ -52,6 +52,13 @@ nav {
   width: 100%;
 }
 
-.sticky + .mainheader {
+.sticky + .maincontainer {
   margin-top: 80px;
 }
+
+/* 
+@media (max-width: 1024px) {
+  .sticky + .mainheader {
+    margin-top: 80px;
+  }
+} */
