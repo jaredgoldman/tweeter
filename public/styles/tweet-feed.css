@@ -1,6 +1,7 @@
 #tweets-container {
   width: 85%;
   margin-top: 1.3em;
+  background-color: #f4f1ec;
 }
  
 .tweet {
@@ -23,6 +24,7 @@
   filter: opacity(100%);
   box-shadow: 10px 10px rgb(194, 194, 194);
   margin: 30px 0px 30px 0px;
+  background-color: white;
 }
 
 .handle {
@@ -93,15 +95,11 @@
   justify-content: flex-end;
 }
 
-/* .button-container {
-  display: 
-} */
-
 .button-background {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(219, 138, 62);
+  background-color: rgb(237, 11, 11);
   width: 70px;
   height: 70px;
   border-radius: 100%;
@@ -109,7 +107,6 @@
   right: 70px;
   bottom: 50px;
   border: 2px white;
-
 }
 
 .button-background img {

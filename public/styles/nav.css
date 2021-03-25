@@ -7,6 +7,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   overflow: hidden;
+  z-index: 1;
 }
 
 .title {
@@ -21,20 +22,23 @@ nav {
   flex-direction: column;
   align-items: center;
   margin-right: 30px;
+  border-width: 1px;
+  border: 1px white dotted;
+  border-radius: 15px;
+  padding: 7px;
 }
 
-#compose-tweet {
+.compose-tweet {
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
   margin-bottom: 5px;
 }
 
 #chevron-nav {
-  height: 25px;
-  width: 25px;
+  height: 30px;
+  width: 20px;
   animation: MoveUpDown 1s linear infinite;
   position: relative;
-/* // figure out how to turn this red */
 }
 
 @keyframes MoveUpDown {
@@ -55,10 +59,3 @@ nav {
 .sticky + .maincontainer {
   margin-top: 80px;
 }
-
-/* 
-@media (max-width: 1024px) {
-  .sticky + .mainheader {
-    margin-top: 80px;
-  }
-} */
