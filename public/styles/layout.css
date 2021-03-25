@@ -39,7 +39,6 @@ body {
     background-color: #f4f1ec;
     margin: 0% 5% 0% 5%; 
   }
-  
   @media (max-width: 1024px) {
    .maincontainer {
      display: flex;

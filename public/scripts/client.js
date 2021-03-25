@@ -130,6 +130,17 @@ $(document).ready(function() {
         sendTweet($serialTweet);
       }
     }) 
+
+    $(".button-background").on("click", function() {
+      window.scroll(0, 0);
+    });
+
+    $(".button-background").on("mouseover", function() {
+      $(".formtop-img").attr('src', "/images/angle-double-down-white.png")
+    });
+    $(".button-background").on("mouseout", function() {
+      $(".formtop-img").attr('src', "/images/angle-double-up-solid.png")
+    });
     
     loadTweets();
     
