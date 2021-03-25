@@ -61,7 +61,11 @@ $(document).ready(function() {
     const $tweetFooter = $(
       `<div class="tweet-bottom">
       <div>${dateCreated}</div>
-      <div class="socials">socials</div>
+      <div class="socials">
+      <img src="/images/heart-solid.svg">
+      <img src="/images/retweet-solid.svg">
+      <img src="/images/flag-solid.svg">
+      </div>
       </div>`
     )
     

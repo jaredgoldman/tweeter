@@ -63,8 +63,22 @@
 .tweet-bottom {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
   padding: 3px 20px 8px 20px;
   font-size: 16px;
+}
+
+.socials {
+  width: 4em;
+  padding-top: .5em;
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+}
+
+.socials img {
+  height: 15px;
+  width: 15px
 }
 
 .button-container-scroll {
