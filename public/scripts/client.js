@@ -52,15 +52,15 @@ $(document).ready(function() {
     // TODO - turn into human readable date string 
     
     const $tweetHeader = $(
-      `<div class="tweet-top">
-      <div class="avatar">
-      <img src="${avatar}">
-      <p>${name}</p>
+     `<div class="tweet-top">
+        <div class="avatar">
+        <img src="${avatar}">
+        <p>${name}</p>
       </div>
       <p class="handle">${handle}</p>
       </div>`
     )
-
+    
     const $tweetBody = $('<div class="tweetbody">').text(tweet);
 
     const $tweetFooter = $(
@@ -86,19 +86,29 @@ $(document).ready(function() {
 
     const loadErrors = (tweet) => {
       if (tweet.length < 140) {
-        $('.error').text('you cannot send a blank tweet');
+        $('#error').text('you cannot send a blank tweet');
+        $('#error').slideDown()
       } else {
-        $('.error').text('your tweet exceeds the character limit')
+        $('#error').text('your tweet exceeds the character limit')
+        $('#error').slideDown()
       }
     }
 
+    $('#compose-container', ).on('click', function () {
+      if ($('#new-tweet').css('display') === 'block') {
+        $('#new-tweet').slideUp();           
+      } else {
+        $('#new-tweet').slideDown();   
+      }
+    });
         
     $('#newtweet').on('submit', function(event) {
+      $('#error').slideUp();
       event.preventDefault();
       loadTweets();
       const $tweet = $('#tweet-text').val();
       if (isTweetInvalid($tweet)) {
-        loadErrors();
+        loadErrors($tweet);
       } else {
         const $serialTweet = $(this).serialize();
         sendTweet($serialTweet);

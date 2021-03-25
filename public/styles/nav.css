@@ -15,10 +15,35 @@ nav {
   padding-left: 1.5em;
 }
  
-.newtweet {
+
+#compose-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 30px;
+}
+
+#compose-tweet {
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
-  padding-right: 1.5em;
+  margin-bottom: 5px;
+}
+
+#chevron {
+  height: 25px;
+  width: 25px;
+  animation: MoveUpDown 1s linear infinite;
+  position: relative;
+/* // figure out how to turn this red */
+}
+
+@keyframes MoveUpDown {
+  0%, 100% {
+    bottom: 0px;
+  }
+  50% {
+    bottom: 5px;
+  }
 }
 
 .sticky {

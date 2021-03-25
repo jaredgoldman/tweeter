@@ -34,7 +34,10 @@
     <!-- Top nav bar (fixed) -->
     <nav id="navbar">
       <span class="title">Tweeter</span>
-      <span class ="newtweet"><strong>Write </strong>a new tweet</span>
+      <div id="compose-container">
+        <div id="compose-tweet"><strong>Write </strong>a new tweet</div>
+        <img id="chevron" src="images/angle-double-down-solid.svg">
+      </div>
     </nav>
     <header class ="mainheader">
       <div>
@@ -46,7 +49,7 @@
     </header>
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <section class="new-tweet">
+      <section id="new-tweet">
         <div class="compose">
           <h3 class ="composespan">Compose Tweet</h3>
           <div id="error"></div>
@@ -56,12 +59,15 @@
           <textarea name="text" id="tweet-text"></textarea>
           <div class="buttoncounter">
             <button type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
+            <output name="counter" id="counter" for="tweet-text">140</output>
           </div>
         </form>
       </section>
       <section id="tweets-container">
       </section>
+      <div id="formtop-button">
+        <img src="images/angle-double-down-solid.svg">
+      </div>
     </main>
     <scripts>
       <!-- External JS -->

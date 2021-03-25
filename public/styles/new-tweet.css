@@ -1,8 +1,9 @@
-section {
+#new-tweet {
   width: 70%;
   display: flex;
   flex-direction: column;
   padding-bottom: 30px;
+  display: none;
 }
 
 form {
@@ -19,6 +20,7 @@ form {
 }
 
 #error {
+  display: none;
   font-size: 15px;
   color: red;
 }
