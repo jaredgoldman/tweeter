@@ -4,8 +4,9 @@ Tweeter is a simple, single-page Twitter clone built using HTML5, CSS3, JavaScri
 
 ## Fianl Product
 
-!["screenshot description"](#)
-!["screenshot description"](#)
+!["Mobile/tablet layout"](https://github.com/jaredgoldman/tweeter/blob/master/docs/layout-handheld.png?raw=true)
+!["Desktop layout"](https://github.com/jaredgoldman/tweeter/blob/master/docs/layout-desktop.png?raw=true)
+!["Form-top button"](https://github.com/jaredgoldman/tweeter/blob/master/docs/form-top-button.png?raw=true)
 
 ## Dependencies
 
