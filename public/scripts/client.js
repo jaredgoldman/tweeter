@@ -128,11 +128,12 @@ $(document).ready(function() {
     }
   });
 
-  //
+  // redirects user to top of page 
   $(".button-background").on("click", function() {
     window.scroll(0, 0);
   });
       
+  // changes chevron on formtop button white on hover
   $(".button-background").on("mouseover", function() {
     $(".formtop-img").attr('src', "/images/angle-double-down-white.png");
   });
