@@ -93,7 +93,7 @@ $(document).ready(function() {
   // EVENT HANDLERS //
       
   // slide animation for new tweet form
-  $('#compose-container',).on('click', function() {
+  $('.tweet-button-container',).on('click', function() {
     if ($('#new-tweet').css('display') === 'block') {
       $('#new-tweet').slideUp();
     } else {

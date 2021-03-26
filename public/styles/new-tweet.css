@@ -39,7 +39,7 @@ textarea {
 label {
   margin-right: 36.5%;
   font-size: 18px;
-  margin-bottom: 3px;
+  margin-bottom: 0.5em;
 }
 
 textarea:focus {
@@ -58,7 +58,7 @@ button {
   font-size: 20px;
   display: flex;
   justify-content: space-between;
-  margin: 10px;
+  margin: 0.5em;
   width: 100%;
 }
 
