@@ -146,6 +146,8 @@ $(document).ready(function() {
     const currentDate = new Date;
     const tweetDate = new Date(date);
     const msDifference = (currentDate - tweetDate);
+    const minutes = Math.round((msDifference / (1000 * 60)));
+    const hours = Math.round((msDifference / (1000 * 60 * 60)));
     const days = Math.round(((msDifference / (1000 * 60 * 60 * 24)) % 7));
     const weeks = Math.round((msDifference / (1000 * 60 * 60 * 24 * 7)));
     if (weeks === 1) {
@@ -153,11 +155,17 @@ $(document).ready(function() {
     }
     if (weeks > 1) {
       return `Posted ${weeks} weeks ago`;
+    } 
+    if (days > 1) {
+      return `posted ${days} days ago`;
     }
-    if (days < 1) {
-      return 'Posted today';
+    if (hours > 1) {
+      return `posted ${hours} hours ago`;
     }
-    return `posted ${days} days ago`;
+    if (minutes > 1) {
+      return `Posted ${minutes} minutes ago`;
+    }
+    return `Just posted`
   };
 
   loadTweets();
